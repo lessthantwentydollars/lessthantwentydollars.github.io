@@ -1,0 +1,23 @@
+<section>
+    <div class="container">
+        <h3 class="bold text-center">Recently Added</h3>
+        <div class="card-deck">
+            {% for post in site.posts limit:9 %}
+            <div class="card">
+                <a class="text-fade text-center mb-3" href="{{post.url}}">{{post.title}}</a>
+                <a style="margin: auto; display: block;" class="text-center" target="blank" href="{{post.amazon }}" alt="{{post.title}}">
+                    <img class="card-img-top" style="display: block; margin: auto; height: 100%;width: 300px;" src="/assets/image/{{post.img}}"
+                        alt="Card image cap">
+                        <button type="button" class="btn btn-outline-dark btn-sm mt-3">CHECK OUT: ${{post.price}}</button>
+                        
+                    </a>
+                <div class="card-body" style="padding-top: 0.5rem;">
+                    <p class="card-text text-center">
+                        {{post.content | strip_html }}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

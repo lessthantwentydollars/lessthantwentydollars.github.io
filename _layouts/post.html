@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+    {% include landing.html %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                    <div class="card">
+                            <a class="text-fade text-center mb-3" href="{{page.url}}">{{page.title}}</a>
+                            <a style="margin: auto; display: block;" class="text-center" target="blank" href="{{page.amazon }}" alt="{{page.title}}">
+                                <img class="card-img-top" style="display: block; margin: auto; height: 100%;width: 300px;" src="/assets/image/{{page.img}}"
+                                    alt="Card image cap">
+                                <button type="button" class="btn btn-outline-dark btn-sm mt-3">CHECK OUT: ${{page.price}}</button>
+                    
+                            </a>
+                            <div class="card-body" style="padding-top: 0.5rem;">
+                                <p class="card-text text-center">
+                                    {{page.content | strip_html }}
+                                </p>
+                            </div>
+                        </div>
+                    <div class="section">
+                        <h3 class="bold text-center">Share with your wealthy friends</h3>
+                        {% include share.html %}
+                    </div>
+                    <div class="section">
+                        {% include product-image-only.html %}
+                    </div>
+            </div>
+        </div>
+    </div>
+    {% include offer.html %} 
+    {% include footer.html %}
+</body>
+{% include plugins/livereload.html %}
+
+</html>

@@ -1,0 +1,14 @@
+#social {
+    text-align: center;
+    padding-left: 0 !important;
+    list-style: none;
+    li {
+        display: inline-flex;
+        padding: 0 15px;
+        font-size: 20px;
+        
+        a {
+            color: black;
+        }
+    }
+}
