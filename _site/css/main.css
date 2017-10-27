@@ -7088,6 +7088,12 @@ section {
 .card {
   border: none; }
 
+@media (max-width: 1200px) {
+  .card-deck {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 .bold {
   font-weight: 700; }
 
